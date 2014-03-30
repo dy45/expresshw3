@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/normalize.css')
+    link(rel='stylesheet', href='stylesheets/main.css')
+    link(rel='stylesheet', href='javascripts/vendor/qunit-1.14.0.css')
+    script(src='javascripts/vendor/modernizr-2.7.1.min.js')
+    script(src='javascripts/vendor/qunit-1.14.0.js')
+    script(src='public/javascripts/calc.js')
+    script.
+     test("exports.add", function() {
+      function add(x, y) {
+       equal(exports.divide(x, y), 70)
+      }
+      divide(140, 2)
+     })
+
+  body
+    block content

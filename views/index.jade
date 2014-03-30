@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p Enter the first number: #{x}
+  p Calculation: #{calculation}
+  p Enter the second number: #{y}
+  p Answer equals #{answer}
+  #calculatorForm
+   form(name="calculator", action="/calculator", method="get")
+    input(type="number", name="x", placeholder="Enter first number")
+    br
+    br
+    label Calculation
+    select(name="calculation")
+     option(value="add",selected) Add
+     option(value="subtract") Subtract
+     option(value="multiply") Multiply
+     option(value="divide") Divide
+    br
+    br
+    input(type="number", name="y", placeholder="Enter second number")
+    br
+    br
+    input(type="submit", value="Calculate")
